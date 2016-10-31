@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+  <title>aplicación</title>
+  </head>
+  <body>
+    
+    <form action="/" method="post">
+	<p>Nombre de usuario @<input name="nombre" id="texbox" rows="1" cols="50" type="text" /> </p>
+    </form>
+     
+     </h3>
+    </div> 
+  </body>
+</html>
