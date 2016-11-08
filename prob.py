@@ -9,7 +9,8 @@ import os
 #lista de variables para las credenciales:
 
 cred =[]
-
+"""
+#This isn't a option because bottle hasn't global variables.
 @get('/')
 def menu():
     return template('credencial.tpl')
@@ -27,12 +28,18 @@ def menu_post():
 				database=cred[3])
   global cnx 
   return template('aplication.tpl')
+"""
 
 """ 
 @get('/')
 def menu():
     return template('aplication.tpl')
  """
+
+
+@route('/')
+def querymostrar():
+    return template('aplication.tpl')
 
 @post('/query')
 def query_submit():
@@ -49,12 +56,7 @@ def query_submit():
   cursor.execute(query)
   return template('query.tpl',cursor=cursor)
 
-@route('/query')
-def querymostrar():
-    return template('aplication.tpl')
   
-@route('/hello')
-def hello():
-    return "Hello World!"
+
 
 run(host='localhost', port=8080, debug=True)

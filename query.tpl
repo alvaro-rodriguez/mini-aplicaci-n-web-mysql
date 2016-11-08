@@ -1,8 +1,9 @@
 % include('aplication.tpl')
+Query out
 <p>+--------------------------------------------------------------------+</p>
 %for row in cursor.fetchall():
-  <p>+------------------------+</p>
+   <p>|</p>
   %for r in row:
-    <p>{{r}}</p>
+   | {{r}}  
   %end
 %end
